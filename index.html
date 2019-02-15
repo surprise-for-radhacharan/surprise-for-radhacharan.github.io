@@ -1,0 +1,58 @@
+<link rel="stylesheet" type="text/css" href="index.css">
+<div id="card">
+    <div id="card-inside">
+      <div class="wrap">
+        <p>Hey RCMan,</p>
+        <p>Happy Valentines day to you! I love you a lot. </p>
+        <p>I am so happy to have you in my life. Though we have our ups and downs, you are genuinely my bestest friend in the world. Thanks for all the sweet memories. </p>
+        <p>I will always try be there for you. Know that you are very dear to me.
+        </p>
+        <p> I am not very good at expressing what I feel , but hope you know even though I am silent about it all. Thanks for having me in your life. Love you."
+        <p>always.</p>
+        <p class="signed">Gayathri</p>
+        
+      </div>
+    </div>
+
+    <div id="card-front">
+      <div class="wrap">
+        <h1>Hey There, RCMan!</h1>
+      </div>
+      <button id="open">&gt;</button>
+      <button id="close">&lt;</button>
+    </div>
+  </div>
+
+<script type="text/javascript">
+  
+  (function() {
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  var card = $('card'),
+      openB = $('open'),
+      closeB = $('close'),
+      timer = null;
+  console.log('wat', card);
+  openB.addEventListener('click', function () {
+    card.setAttribute('class', 'open-half');
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', 'open-fully');
+      timer = null;
+    }, 1000);
+  });
+
+  closeB.addEventListener('click', function () {
+    card.setAttribute('class', 'close-half');
+    if (timer) clearTimerout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', '');
+      timer = null;
+    }, 1000);
+  });
+
+}());
+
+</script>
